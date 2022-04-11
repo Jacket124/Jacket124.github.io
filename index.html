@@ -2,8 +2,27 @@
 <html>
 <head>
 <title>super cool game </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 </head>
 <body>
 <h1>super cool game yes very very cool</h1>
+<button id="refreshGameButton" class="btn btn-primary btn-lg" onclick="completeSentence(gameArray, 'randomGame')">Choose a game</button>
+<h2>Game to play:<span id="randomGame" class="lable lable-success">...</span></h2>
+
+<script type="text/javascript">
+
+var gameArray = ["corners","Dodeball","pip, squeak, ethelred","skittles", "mowgli's war"] ;
+
+function randIndex (arr) { 
+return Math.floor ((Math.random() * arr.length));
+}
+function completSetence(arr, location) {
+index = randomIndex (arr);
+document.getElementById(location).innerHTML = arr[index];
+</script>
 </body>
 </html>
